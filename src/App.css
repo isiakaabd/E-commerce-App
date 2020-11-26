@@ -7,7 +7,7 @@
 }
 
 body {
-    font-family: "Roboto" "Ubuntu", sans-serif;
+    font-family: "Roboto" ,"Ubuntu", sans-serif;
     background: var(--mainWhite) !important;
     color: var(--mainDark) !important;
 }
