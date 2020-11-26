@@ -14,7 +14,7 @@ class Details extends Component {
                     value => {
                         const { id, title, description, category, image, price } = value.detailProduct
 
-                        // console.log(title[0][2])
+
                         return (
                             <div className="container py-5">
                                 <div className="row">
@@ -43,14 +43,14 @@ class Details extends Component {
                                         <div>
                                             <Link to="/">
                                                 <ButtonContainer>
-                                                    back to Product
-                                        </ButtonContainer >
+                                                    store
+                                        </ButtonContainer  >
                                             </Link>
                                             <Link to="/cart">
                                                 <ButtonContainer onClick={() => {
                                                     value.addTOCart(id)
                                                     value.openModal(id)
-                                                }}>Add to Cart</ButtonContainer>
+                                                }} >Add to Cart</ButtonContainer>
                                             </Link>
                                         </div>
                                     </div>

@@ -9,10 +9,9 @@ background:transparent;
 border:0.05rem solid var(--lightBlue);
 color: var(--lightBlue);
 border-radius:0.5rem;
-
 padding: 0.2rem 0.5rem;
 cursor:pointer;
-margin:.1rem .3rem .1rem 0;
+margin:.1rem .3rem .6rem 0;
 transition: all 0.2s ease-in-out;
 &:hover{
     background: var(--lightBlue);

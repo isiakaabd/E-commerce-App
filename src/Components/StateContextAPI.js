@@ -154,8 +154,7 @@ export class Provider extends Component {
         Product.count = Product.count + 1;
 
         Product.total = Product.count * Product.price
-        console.log(
-            Product.total)
+
         this.setState(() => {
             return {
                 cart: [...tempCart]
@@ -176,7 +175,6 @@ export class Provider extends Component {
 
         this.state.cart.map((item) => subTotal += item.total)
 
-        console.log(subTotal)
         const total = subTotal
 
 

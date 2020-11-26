@@ -10,15 +10,15 @@ export default class Product extends Component {
 
         return (
 
-            <ProductWrapper className="col-9 mx-auto col-md-8 col-lg-1.5 my-3  img-fluid">
-                <div className="card">
+            <ProductWrapper className="col-10 mx-auto col-md-3  col-lg-3 my-2"  >
+                <div className="card" style={{ height: "100%" }}>
                     <Consumer>
                         {
                             (value) => {
                                 return (
-                                    <div className="img-container  p-2" onClick={() => value.handleDetail(id)} >
+                                    <div className="img-container  p-5" onClick={() => value.handleDetail(id)} style={{ height: "100%" }}>
                                         <Link to="/details">
-                                            <img src={image} alt="Product" className="card-img-top img-fluid" />
+                                            <img src={image} alt="Product" style={{ maxHeight: "100%" }} className="card-img-top " />
                                         </Link>
                                         <button className="cart-btn" onClick={() => {
                                             value.addTOCart(id)
@@ -33,8 +33,8 @@ export default class Product extends Component {
                         {/* 
                          */}
                     </Consumer>
-                    <div className="card-footer d-flex justify-content-lg-between">
-                        <p className="align-self-left mb-0 mr-4">{title}</p>
+                    <div className="card-footer d-flex justify-content-md-between">
+                        <p className="align-self-center mb-0 mr-4">{title}</p>
                         <h5 className="text-blue font-italic mb-0">
                             <span className="mr-2">$</span>{price}
                         </h5>
@@ -52,15 +52,15 @@ const ProductWrapper = styled.div`
 .card-footer{
     background:transparent;
     border-top:transparent;
-    transition:all 1s linear
+    transition:all 1s linear;
 }
 &:hover{
     .card{
         border:0.04rem solid rgba(0,0,0, .2);
-        box-shadow:2px 2px 5px rgba(0,0,0,.2)
+        box-shadow:2px 2px 5px rgba(0,0,0,.2);
     }
     .card-footer{
-        background:rgba(247,247,247)
+        background:rgba(247,247,247);
     }
 }
     .img-container{
@@ -72,7 +72,7 @@ const ProductWrapper = styled.div`
         transition: all 2s linear;
     }
     .img-container:hover .card-img-top{
-        transform: scale(1.1)
+        transform: scale(1.1);
     }
     .cart-btn{
         position:absolute;
@@ -93,10 +93,10 @@ const ProductWrapper = styled.div`
         transform: translate(0,0);
     }
 .cart-btn:hover{
-    color:var(--mainBluel)
+    color:var(--mainBlue)
 }
 cart-btn:focus{
     outline:none;
 }
-
+width:100%
 `
