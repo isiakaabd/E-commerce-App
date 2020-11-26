@@ -1,6 +1,9 @@
 import React from 'react'
-
+// import { reactLocalStorage } from 'reactjs-localstorage';
 export default function CartItem({ item, value }) {
+    // try mapping through
+    // const items = reactLocalStorage.getObject('var')
+    // console.log(items)
     const { id, title, image, price, count, total } = item
     const { increment, decrement, removeItem } = value
     return (
