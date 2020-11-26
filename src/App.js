@@ -1,5 +1,6 @@
-import Bootstrap from "bootstrap/dist/css/bootstrap.min.css"
+
 import './App.css';
+// import MyApp from "./Components/paypal"
 import React from "react"
 import Navbar from "./Components/Navbar"
 import ProductList from "./Components/ProductList"
@@ -7,7 +8,8 @@ import Cart from "./Components/cart/Cart";
 import Default from './Components/Default';
 import { Switch, Route } from "react-router-dom";
 import Details from "./Components/Details";
-import Modal from "./Components/Modal"
+import Modal from "./Components/Modal";
+import 'bootstrap/dist/css/bootstrap.min.css'
 
 function App() {
   return (

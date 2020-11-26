@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-import Styled from "styled-components";
-import { Link, link } from "react-router-dom";
+
+import { Link } from "react-router-dom";
 import { Consumer } from "./StateContextAPI";
 import styled from 'styled-components';
 

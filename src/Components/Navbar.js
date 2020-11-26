@@ -9,8 +9,9 @@ import styled from "styled-components"
 export default class Navbar extends Component {
     render() {
         return (
-            <NavContainer className="nav bar navbar-expand-sm navbar-light px-sm-2" >
+            <NavContainer className="nav bar   mx-auto navbar-expand-lg navbar-light px-sm-2" >
                 <Link to="/">
+                    {/* <span className="text-blue-20 ml-8 font-weight-bolder">R</span> */}
                     <img src={imglogo} style={{ width: "30px" }} alt="logo" className="navbar-brand  " />
                 </Link>
                 <ul className="nav bar-nav align-items-left">

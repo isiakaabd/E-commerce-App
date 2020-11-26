@@ -16,7 +16,7 @@ export default function CartTotals({ value }) {
                             <button className="btn btn-outline-danger  text-uppercase mb-3 px-5" onClick={() => { clearCart() }}> clear cart</button>
                         </Link>
 
-                        <h5 ><span className="text-title"> total</span><strong>{cartTotal}</strong></h5>
+                        <h5 ><span className="text-title text-success font-weight-bold"> total: </span><strong> $ {cartTotal}</strong></h5>
                     </div>
 
                 </div>
