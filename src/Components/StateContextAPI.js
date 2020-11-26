@@ -143,7 +143,7 @@ export class Provider extends Component {
 
     increment = (id) => {
         let tempCart = [...this.state.cart];
-        console.log(tempCart)
+
         const selectedProduct = tempCart.find(item => item.id === id)
         const index = tempCart.indexOf(selectedProduct);
         const Product = tempCart[index];
