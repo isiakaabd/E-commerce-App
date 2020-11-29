@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-
+import PropTypes from "prop-types"
 import { Link } from "react-router-dom";
 import { Consumer } from "./StateContextAPI";
 import styled from 'styled-components';
@@ -100,3 +100,17 @@ cart-btn:focus{
 }
 width:100%
 `
+
+Product.propTypes = {
+    Product: PropTypes.shape({
+        id: PropTypes.number,
+        title: PropTypes.string,
+        image: PropTypes.string.isRequired,
+        price: PropTypes.number
+
+    })
+    // 
+
+    //  or this
+    // Product: PropTypes.object.isRequired
+}

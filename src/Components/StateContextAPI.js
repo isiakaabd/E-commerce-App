@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
-import { StoreProducts, detailProduct } from "./State";
+import { detailProduct } from "./State";
+import axios from "axios"
 
 
 const Context = React.createContext()
@@ -24,19 +25,23 @@ export class Provider extends Component {
     }
 
     componentDidMount() {
-        this.setProducts();
-    }
-    setProducts = () => {
-        let tempProducts = [];
-        StoreProducts.forEach(item => {
-            const singleItem = { ...item }
-            tempProducts = [...tempProducts, singleItem]
-        })
-        this.setState(() => {
-            return { Products: tempProducts }
-        })
+        axios.get("https://fakestoreapi.com/products")
+            .then(response => this.setState({ Products: response.data }))
 
+
+        // this.setProducts();
     }
+    // setProducts = () => {
+    //     let tempProducts = [];
+    //     StoreProducts.forEach(item => {
+    //         const singleItem = { ...item }
+    //         tempProducts = [...tempProducts, singleItem]
+    //     })
+    //     this.setState(() => {
+    //         return { Products: tempProducts }
+    //     })
+
+    // }
 
     // open modal
     openModal = id => {
@@ -55,7 +60,7 @@ export class Provider extends Component {
 
     decrement = (id) => {
         let tempCart = [...this.state.cart];
-        console.log(tempCart)
+
         const selectedProduct = tempCart.find(item => item.id === id)
         const index = tempCart.indexOf(selectedProduct);
         const Product = tempCart[index];
@@ -116,6 +121,7 @@ export class Provider extends Component {
     getItem = id => {
         // very important function
         const Product = this.state.Products.find(item => item.id === id)
+
         return Product;
     }
 
