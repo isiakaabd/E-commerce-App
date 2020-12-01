@@ -24,6 +24,7 @@ export class Provider extends Component {
 
     }
 
+
     componentDidMount() {
         axios.get("https://fakestoreapi.com/products")
             .then(response => this.setState({ Products: response.data }))
@@ -31,17 +32,7 @@ export class Provider extends Component {
 
         // this.setProducts();
     }
-    // setProducts = () => {
-    //     let tempProducts = [];
-    //     StoreProducts.forEach(item => {
-    //         const singleItem = { ...item }
-    //         tempProducts = [...tempProducts, singleItem]
-    //     })
-    //     this.setState(() => {
-    //         return { Products: tempProducts }
-    //     })
 
-    // }
 
     // open modal
     openModal = id => {
@@ -122,7 +113,11 @@ export class Provider extends Component {
         // very important function
         const Product = this.state.Products.find(item => item.id === id)
 
+        //
+        console.log(Product)
         return Product;
+
+
     }
 
 
