@@ -36,7 +36,7 @@ export default class Product extends Component {
                     <div className="card-footer d-flex justify-content-md-between">
                         <p className="align-self-center mb-0 mr-4">{title}</p>
                         <h5 className="text-blue font-italic mb-0">
-                            <span className="mr-2">$</span>{price}
+                            <span className=" mr-1 overflow-hidden">$</span>{price}
                         </h5>
                     </div>
                 </div>
@@ -98,7 +98,8 @@ const ProductWrapper = styled.div`
 cart-btn:focus{
     outline:none;
 }
-width:100%
+width:100%;
+over-flow:hidden
 `
 
 Product.propTypes = {

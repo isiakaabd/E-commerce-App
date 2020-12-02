@@ -9,7 +9,7 @@ import styled from "styled-components"
 export default class Navbar extends Component {
     render() {
         return (
-            <NavContainer className="navbar  mx-auto navbar-expand-sm navbar-light fixed-top" >
+            <NavContainer className="navbar  mx-auto navbar-expand-sm navbar-light  " >
                 <Link to="/">
                     {/* <span className="text-blue-20 ml-8 font-weight-bolder">R</span> */}
                     <img src={imglogo} style={{ width: "30px", }} alt="logo" className="navbar-brand" />
@@ -47,12 +47,21 @@ export default class Navbar extends Component {
 const NavContainer = styled.nav`
 background: var(--mainBlue) !important;
 
+
+
 .nav-link{
     color: var(--mainWhite)  !important;
     font-size:1.4rem;
     text-transform:capitalize
 }
 
-width:100% !important
+   
+  
+    
+    
+
+
+width:100% !important;
+margin-bottom: 10px
 
 `
