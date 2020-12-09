@@ -2,7 +2,6 @@
   "name": "market",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://isiakaabd.github.io/E-commerce-App",
   "dependencies": {
     "@paypal/react-paypal-js": "^3.0.2",
     "@testing-library/jest-dom": "^5.11.6",
@@ -21,7 +20,6 @@
     "web-vitals": "^0.2.4"
   },
   "scripts": {
-    "deploy": "npm run build&&gh-pages -d build",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
