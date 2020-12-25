@@ -114,7 +114,7 @@ export class Provider extends Component {
         const Product = this.state.Products.find(item => item.id === id)
 
         //
-        console.log(Product)
+        // console.log(Product)
         return Product;
 
 
